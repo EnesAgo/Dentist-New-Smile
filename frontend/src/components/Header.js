@@ -10,11 +10,11 @@ function Header() {
                 <li>
                     <div>
                         <i className="fas fa-phone fa-rotate-90 headerLeftIcon"></i>
-                        <a href="tel:+0012344556666">+00 123 4455 6666</a>
+                        <a href="tel:+38979699379">070 600 370</a>
                     </div>
                     <div>
                         <i className="fas fa-envelope headerLeftIcon"></i>
-                        <a href="mailto:email@domain.com">email@domain.com</a>
+                        <a href="mailto:enesago010@gmail.com">enesago010@gmail.com</a>
                     </div>
                 </li>
                 <li>
