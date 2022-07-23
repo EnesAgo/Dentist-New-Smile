@@ -24,8 +24,10 @@ body{
     height: 100%;
 }
 :root{
-    --green-default-color: rgba(49, 214, 166, 1);
-    --green-hover-color: rgb(43, 194, 151);
+    /* --green-default-color: rgba(49, 214, 166, 1); */
+    /* --green-hover-color: rgb(43, 194, 151); */
+    --green-default-color: #ffd700;
+    --green-hover-color: #ffe550;
 
 }
 .green{
