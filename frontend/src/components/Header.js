@@ -32,7 +32,7 @@ function Header() {
             
             <ul>
                 <li className="firstLi">
-                    <h3><span className="green">One</span>-Health</h3>
+                    <h3><span className="green">New</span>-Smile</h3>
                     <div>
                             <button id="searchSumbmit">
                                 <i className="fas fa-search green"></i>
