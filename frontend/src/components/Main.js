@@ -5,8 +5,8 @@ function Main() {
           <div>
                   <div className="main">
         <div className="container container1" id="container1">
-            <h4>LET'S MAKE YOUR LIFE HAPPIER</h4>
-            <h2>HEALTHY LEAVING</h2>
+            <h4>LET'S MAKE YOUR TEETH HAPPIER</h4>
+            <h2>NEW SMILE</h2>
 
             <div className="consultBut">
                 <p>let's consult</p>
