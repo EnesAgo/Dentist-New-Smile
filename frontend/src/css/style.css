@@ -80,168 +80,7 @@ button{
     background: rgb(117, 117, 117); 
 }
 
-/*header*/
-.header{
-    grid-area: header;
-    /* position: sticky;
-    top: 0;
-    background-color: #fff; */
-}
 
-/*header-top*/
-.header .top{
-    min-height: 30px;
-    border-bottom: .5px solid rgba(226, 226, 226, .5);
-}
-.header .top ul{
-    min-height: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-.header .top ul li{
-    display: flex;
-}
-.header .top ul li div:nth-child(1){
-    margin: 3px 0;
-    padding-right: 10px;
-    border-right: .5px solid rgba(201, 201, 201, 0.7);
-}
-.header .top ul li div:nth-child(2){
-    margin: 3px 0;
-    padding-left: 10px;
-}
-.header .top ul li div a{
-    color: rgba(187, 187, 187, 1);
-    margin-left: 5px;
-    font-size: 13px;
-}
-.headerLeftIcon{
-    color: var(--green-default-color);
-    font-size: 13px;
-}
-.headerRightIcon{
-    color: rgba(180, 180, 180, 0.8);
-    font-size: 13px;
-    padding: 0 7px;
-}
-
-/*header-bot*/
-
-/*first li*/
-.header .bot{
-    min-height: 60px;
-    border-bottom: .5px solid rgba(226, 226, 226, .5)
-}
-.header .bot ul{
-    display: flex;
-    justify-content: space-around;
-}
-
-.header .bot ul .firstLi{
-    display: flex;
-}
-.header .bot ul .firstLi h3{
-    font-size: 23px;
-    line-height: 60px;
-}
-.header .bot ul .firstLi div{
-    display: flex;
-    border-radius: 3px;
-    min-height: 60px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 15px;
-}
-.header .bot ul .firstLi div button{
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 35px;
-    max-width: 45px;
-    width: 40px;
-    line-height: 13.3px;
-    font-size: 13.3px;
-    background-color: #fff;
-    border: 0.5px solid #8f8f8f;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
-    transition: 100ms;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    transition: 350ms;
-}
-.header .bot ul .firstLi div button:hover{
-    background-color: #e6e6e6;
-}
-.header .bot ul .firstLi div input{
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 0.5px solid #8f8f8f;
-    border-left: none !important;
-    border-radius: 0 5px 5px 0;
-    height: 35px;
-    max-width: 300px;
-    line-height: 15px;
-    font-size: 13px;
-    transition: 350ms;
-    padding-left: 5px;
-}
-.header .bot ul .firstLi div input::placeholder{
-    font-size: 13px;
-}
-.header .bot ul .firstLi div input:hover{
-    border: 1px solid black;
-    box-shadow: 0px 0px 0px 1px black inset;
-}
-.header .bot ul .firstLi div input:focus-visible, .header .bot ul .firstLi div input:focus{
-    outline: none;
-    box-shadow: 0px 0px 0px 1px black inset;
-
-}
-
-/*seccond-li // navbar*/
-.header .bot ul .secLi ul{
-    min-height: 60px;
-    max-width: 600px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-}
-.header .bot ul .secLi ul li a{
-    color:rgba(0, 0, 0, .4);
-    font-weight: 600;
-    font-size: 16px;
-}
-.header .bot ul .secLi ul li a:hover{
-    color: var(--green-default-color);
-}
-.header .bot ul .secLi ul li a .login{
-    background-color: var(--green-default-color);
-    color: #fff;
-    width: 130px;
-    height: 35px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: 350ms;
-}
-.header .bot ul .secLi ul li a .login:hover{
-    background-color: var(--green-hover-color);
-}
-.header .bot ul .secLi ul li a .login h4{
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-}
 
 
 /*hamburger-menu*/
@@ -285,6 +124,9 @@ button{
     width: 100%;
     min-height: 400px;
     background-color: #fff;
+}
+.container:nth-child(2n){
+    background-color: rgb(244, 249, 245);
 }
 
 /*container 1*/
@@ -586,61 +428,6 @@ button{
 
 /*media-query // responsive*/
 @media only screen and (max-width: 1000px){
-    /*header*/
-    .navbar{
-        margin: 0;
-        padding: 0;
-    }
-
-    .header .bot ul .firstLi h3{
-        margin-left: 15px;
-    }
-    .header .bot ul .firstLi{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-    .header .bot ul .secLi{
-        background-color: #fff;
-        width: 100%;
-        height: 300px;
-        position: absolute;
-        border-top: 1px black solid;
-        top: 90px;
-        left: 0;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        flex-wrap: wrap;
-        display: flex;
-        transition: 350ms;
-
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        z-index: -10;
-    }
-    .header .bot ul .secLi ul{
-        margin: 0;
-        padding: 0;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .menubut{
-        display: flex;
-        margin-right: 15px;
-    }
-    .acti{
-        visibility: visible !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        z-index: 10 !important;
-    }
 
 
     /*main*/
@@ -680,27 +467,4 @@ button{
 
     /*footer*/
 }
-@media only screen and (max-width: 500px){
-    /*header*/
-    .header .bot ul{
-        justify-content: left;
-    }
 
-    .header .bot ul .firstLi div{
-        display: none;
-    }
-
-
-    /*main*/
-
-
-}
-@media only screen and (max-width: 370px){
-    /*header*/
-    .header .top ul li:nth-child(2){
-        display: none;
-    }
-
-
-    /*main*/
-}
