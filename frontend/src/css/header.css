@@ -1,3 +1,9 @@
+:root{
+    --yellow-default-color: #ffd700;
+    --yellow-hover-color: #ffe550;
+}
+
+
 /*header*/
 .header{
     grid-area: header;
@@ -36,7 +42,7 @@
     font-size: 13px;
 }
 .headerLeftIcon{
-    color: var(--green-default-color);
+    color: var(--yellow-default-color);
     font-size: 13px;
 }
 .headerRightIcon{
@@ -138,10 +144,10 @@
     font-size: 16px;
 }
 .header .bot ul .secLi ul li a:hover{
-    color: var(--green-default-color);
+    color: var(--yellow-default-color);
 }
 .header .bot ul .secLi ul li a .login{
-    background-color: var(--green-default-color);
+    background-color: var(--yellow-default-color);
     color: #fff;
     width: 130px;
     height: 35px;
@@ -153,7 +159,7 @@
     transition: 350ms;
 }
 .header .bot ul .secLi ul li a .login:hover{
-    background-color: var(--green-hover-color);
+    background-color: var(--yellow-hover-color);
 }
 .header .bot ul .secLi ul li a .login h4{
     font-weight: 400;

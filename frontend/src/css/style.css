@@ -24,14 +24,14 @@ body{
     height: 100%;
 }
 :root{
-    /* --green-default-color: rgba(49, 214, 166, 1); */
-    /* --green-hover-color: rgb(43, 194, 151); */
-    --green-default-color: #ffd700;
-    --green-hover-color: #ffe550;
+    /* --yellow-default-color: rgba(49, 214, 166, 1); */
+    /* --yellow-hover-color: rgb(43, 194, 151); */
+    --yellow-default-color: #ffd700;
+    --yellow-hover-color: #ffe550;
 
 }
 .green{
-    color: var(--green-default-color);
+    color: var(--yellow-default-color);
 }
 button{
     appearance: none;
@@ -43,7 +43,7 @@ button{
 
 .mediumGreenButton{
     margin-top: 20px;
-    background-color: var(--green-default-color);
+    background-color: var(--yellow-default-color);
     color: #fff;
     width: 120px;
     height: 35px;
@@ -56,7 +56,7 @@ button{
     transition: 350ms;
 }
 .mediumGreenButton:hover{
-    background-color: var(--green-hover-color);
+    background-color: var(--yellow-hover-color);
 }
 .mediumGreenButton p{
     font-family: 'Poppins', sans-serif;
@@ -166,7 +166,7 @@ button{
 .container1 .consultBut{
     margin: 10px;
     margin-top: 20px;
-    background-color: var(--green-default-color);
+    background-color: var(--yellow-default-color);
     color: #fff;
     width: 120px;
     height: 35px;
@@ -179,7 +179,7 @@ button{
     transition: 350ms;
 }
 .container1 .consultBut:hover{
-    background-color: var(--green-hover-color);
+    background-color: var(--yellow-hover-color);
 }
 .container1 .consultBut p{
     font-weight: 400;
@@ -340,13 +340,13 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--green-default-color);
+    background-color: var(--yellow-default-color);
     color: #fff;
     font-size: 18px;
     transition: 350ms;
 }
 .container3 .buttons button:hover{
-    background-color: var(--green-hover-color);
+    background-color: var(--yellow-hover-color);
 }
 .container3 .buttons button:nth-child(1){
     border-radius: 50% 0 0 50%;
