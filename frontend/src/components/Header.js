@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/header.css'
 
 function Header() {
+
+    const [isActive, setIsActive] = useState("")
+
+    function changeActive() {
+        if(isActive == "" || !isActive || isActive == undefined){
+            setIsActive("active")
+        }
+        else{
+            setIsActive("")
+        }
+    }
+
       return (
         <div className="header">
         <div className="top">
@@ -39,28 +51,28 @@ function Header() {
                             </button>
                             <input type="text" id="searchInput" placeholder="Enter Keyword..." />
                     </div>
-                    <span id="openNav" className="menubut">
+                    <span onClick={changeActive} id="openNav" className="menubut">
                         <span></span>
                         <span></span>
                         <span></span>
                     </span>
                 </li>
-                <li className="secLi">
+                <li className={`secLi ${isActive}`}>
                     <ul className="navbar">
                         <li>
-                            <a href="#container1">Home</a>
+                            <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#container2">About Us</a>
+                            <a href="#">About Us</a>
                         </li>
                         <li>
-                            <a href="#container3">Doctors</a>
+                            <a href="#">Doctors</a>
                         </li>
                         <li>
-                            <a href="#container4">News</a>
+                            <a href="#">News</a>
                         </li>
                         <li>
-                            <a href="#container5">Contact</a>
+                            <a href="#">Contact</a>
                         </li>
                         <li>
                             <a href="#">
