@@ -8,13 +8,13 @@ function Container5() {
 
           <form action="https:localhost:3001/email" method="post">
 
-            <input type="text" placeHolder='name&surname' />
+            <input type="text" placeholder='name&surname' />
 
-            <input type="email" placeHolder='email' />
+            <input type="email" placeholder='email' />
 
-            <input type="text" placeHolder='phone number' />
+            <input type="text" placeholder='phone number' />
 
-            <textarea placeHolder='text' cols="30" rows="10"></textarea>
+            <textarea placeholder='text' cols="30" rows="10"></textarea>
 
             <button type="submit">submit</button>
 

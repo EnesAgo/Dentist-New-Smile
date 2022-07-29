@@ -37,7 +37,7 @@ function Header() {
                             <button id="searchSumbmit">
                                 <i className="fas fa-search green"></i>
                             </button>
-                            <input type="text" id="searchInput" placeHolder="Enter Keyword..." />
+                            <input type="text" id="searchInput" placeholder="Enter Keyword..." />
                     </div>
                     <span id="openNav" className="menubut">
                         <span></span>
@@ -48,19 +48,19 @@ function Header() {
                 <li className="secLi">
                     <ul className="navbar">
                         <li>
-                            <a onClick="changeColor(this)" href="#container1">Home</a>
+                            <a href="#container1">Home</a>
                         </li>
                         <li>
-                            <a onClick="changeColor(this)" href="#container2">About Us</a>
+                            <a href="#container2">About Us</a>
                         </li>
                         <li>
-                            <a onClick="changeColor(this)" href="#container3">Doctors</a>
+                            <a href="#container3">Doctors</a>
                         </li>
                         <li>
-                            <a onClick="changeColor(this)" href="#container4">News</a>
+                            <a href="#container4">News</a>
                         </li>
                         <li>
-                            <a onClick="changeColor(this)" href="#container5">Contact</a>
+                            <a href="#container5">Contact</a>
                         </li>
                         <li>
                             <a href="#">
