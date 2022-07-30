@@ -22,7 +22,7 @@ function Header() {
                 <li>
                     <div>
                         <i className="fas fa-phone fa-rotate-90 headerLeftIcon"></i>
-                        <a href="tel:+38979699379">070 600 370</a>
+                        <a href="tel:+38972232111">072 232 111</a>
                     </div>
                     <div>
                         <i className="fas fa-envelope headerLeftIcon"></i>

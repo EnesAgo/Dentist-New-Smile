@@ -8,26 +8,43 @@ function Container3() {
 
       const [threeUrls, setThreeUrls] = useState([arr[0], arr[1], arr[2]])
 
-      const [index, setIndex] = useState(0);
-
-      function goLeft() {
-        console.log("left")
-      }
+      const [index, setIndex] = useState(1);
 
       function goRight() {
-        if(threeUrls[0] == arr[0]){
-            setThreeUrls([arr[arr.length-1], arr[0], arr[1]])
-            setIndex(arr.length-1)
+
+        if(index == 1){
+            setIndex(prev => prev-1)
+            setThreeUrls([arr[arr.length-1], arr[index-1], arr[index]])
         }
-        else if(threeUrls[1] == arr[0]){
-            setThreeUrls([arr[arr.length-2], arr[arr.length-1], arr[0]])
-            setIndex(arr.length-2)
+        else if(index == 0){
+            setIndex(arr.length-1)
+            setThreeUrls([arr[arr.length-2], arr[arr.length-1], arr[index]])
         }
         else{
             setIndex(prev => prev-1)
-            setThreeUrls([arr[index], arr[index-1], arr[index-2]])
+            setThreeUrls([arr[index-2], arr[index-1], arr[index]])
         }
         console.log(index)
+
+      }
+
+
+      function goLeft() {
+
+        if(index == arr.length-2){
+            setIndex(prev => prev+1)
+            setThreeUrls([arr[index], arr[index+1], arr[0]])
+        }
+        else if(index == arr.length-1){
+            setIndex(0)
+            setThreeUrls([arr[index], arr[0], arr[1]])
+        }
+        else{
+            setIndex(prev => prev+1)
+            setThreeUrls([arr[index], arr[index+1], arr[index+2]])
+        }
+        console.log(index)
+
       }
 
       return (
