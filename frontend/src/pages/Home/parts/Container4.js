@@ -5,7 +5,7 @@ function Container4() {
       return (
         <div className="container container4" id="container4">
 
-            <h1>Latest News</h1>
+            <h1>Latest Posts</h1>
             
             <ul id="news">
                 <li>

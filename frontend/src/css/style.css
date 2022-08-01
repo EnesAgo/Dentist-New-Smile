@@ -10,7 +10,7 @@ html, body, #root, .App{
     height: 100% !important;
     width: 100% !important;
 }
-body{
+.App{
     display: grid;
     grid-template-areas: 
     "header"

@@ -33,8 +33,10 @@ function Footer() {
                 <h3>Contact</h3>
 
                 <a href="#">351 street Franklin, MA 02038</a> <br />
-                <a href="tel:+38972232111">072 232 111</a> <br /> 
-                <a href="tel:+38946200400">046 200 400</a> <br /> <br />
+                
+                <a href="tel:+38972232111"><i className="fas fa-phone fa-rotate-90" style={{paddingTop:"5px"}}></i>  072 232 111</a> <br />
+                
+                <a href="tel:+38946200400"><i className="fas fa-phone fa-rotate-90" style={{paddingTop:"5px"}}></i>  046 200 400</a> <br /> <br />
 
                 <h3>Social Media</h3>
 

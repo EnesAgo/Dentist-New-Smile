@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import '../css/header.css'
 
 function Header() {
@@ -22,18 +23,18 @@ function Header() {
                 <li>
                     <div>
                         <i className="fas fa-phone fa-rotate-90 headerLeftIcon"></i>
-                        <a href="tel:+38972232111">072 232 111</a>
+                        <a className="link" href="tel:+38972232111">072 232 111</a>
                     </div>
                     <div>
                         <i className="fas fa-envelope headerLeftIcon"></i>
-                        <a href="mailto:enesago010@gmail.com">enesago010@gmail.com</a>
+                        <a className="link" href="mailto:enesago010@gmail.com">enesago010@gmail.com</a>
                     </div>
                 </li>
                 <li>
-                    <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook-f headerRightIcon"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i className="fab fa-twitter headerRightIcon"></i></a>
-                    <a href="https://tiktok.com" target="_blank"><i className="fab fa-tiktok headerRightIcon"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram headerRightIcon"></i></a>
+                    <a className="link" href="https://facebook.com" target="_blank"><i className="fab fa-facebook-f headerRightIcon"></i></a>
+                    <a className="link" href="https://twitter.com" target="_blank"><i className="fab fa-twitter headerRightIcon"></i></a>
+                    <a className="link" href="https://tiktok.com" target="_blank"><i className="fab fa-tiktok headerRightIcon"></i></a>
+                    <a className="link" href="https://instagram.com" target="_blank"><i className="fab fa-instagram headerRightIcon"></i></a>
                     
 
                 </li>
@@ -60,22 +61,24 @@ function Header() {
                 <li className={`secLi ${isActive}`}>
                     <ul className="navbar">
                         <li>
-                            <a href="#">Home</a>
+                            {/* <a className="link" href="#">Home</a> */}
+                            <Link className='link' to="/" >Home</Link>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
+                            {/* <a className="link" href="#">About Us</a> */}
+                            <Link className='link' to="/About" >About</Link>
                         </li>
                         <li>
-                            <a href="#">Doctors</a>
+                            <a className="link" href="#">Before/After</a>
                         </li>
                         <li>
-                            <a href="#">News</a>
+                            <a className="link" href="#">Instagram Posts</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a className="link" href="#">Contact</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a className="link" href="#">
                                 <div className="login">
                                     <h4>Login/Register</h4>
                                 </div>

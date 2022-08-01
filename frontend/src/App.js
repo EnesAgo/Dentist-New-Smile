@@ -11,6 +11,7 @@ import {
   Route
 
  } from 'react-router-dom';
+import AboutUS from "./pages/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Routes>
 
             <Route path="/" element={<Home />} />
+
+            <Route path="/about" element={<AboutUS />} />
 
         </Routes>
 

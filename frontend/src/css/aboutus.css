@@ -1,0 +1,31 @@
+.AboutMain{
+    grid-area: main;
+    background-color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutSection{
+    background-color: rgb(244, 249, 245);
+    width: 100%;
+    min-height: 300px;
+}
+
+.aboutSection:nth-child(2n){
+    background-color: #fff;
+}
+
+.AboutMain .firstSection{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.AboutMain .firstSection img {
+    height: 200px;
+}

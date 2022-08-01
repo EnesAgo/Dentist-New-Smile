@@ -131,22 +131,22 @@
 /*seccond-li // navbar*/
 .header .bot ul .secLi ul{
     min-height: 60px;
-    max-width: 600px;
-    width: 500px;
+    max-width: 700px;
+    width: 600px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
 }
-.header .bot ul .secLi ul li a{
+.header .bot ul .secLi ul li .link{
     color:rgba(0, 0, 0, .4);
     font-weight: 600;
     font-size: 16px;
 }
-.header .bot ul .secLi ul li a:hover{
+.header .bot ul .secLi ul li .link:hover{
     color: var(--yellow-default-color);
 }
-.header .bot ul .secLi ul li a .login{
+.header .bot ul .secLi ul li .link .login{
     background-color: var(--yellow-default-color);
     color: #fff;
     width: 130px;
@@ -158,10 +158,10 @@
     text-align: center;
     transition: 350ms;
 }
-.header .bot ul .secLi ul li a .login:hover{
+.header .bot ul .secLi ul li .link .login:hover{
     background-color: var(--yellow-hover-color);
 }
-.header .bot ul .secLi ul li a .login h4{
+.header .bot ul .secLi ul li .link .login h4{
     font-weight: 400;
     font-size: 14px;
     text-align: center;
