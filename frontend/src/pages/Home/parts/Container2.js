@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../../../css/style.css'
 
 function Container2() {
@@ -31,9 +32,11 @@ function Container2() {
                         beatae accusantium ipsam repellat laboriosam. Blanditiis, 
                         fugiat eum? Sint consequatur temporibus repudiandae?
                     </p>
+                    <Link to="/about">
                     <div className="mediumGreenButton">
                         <p>let's consult</p>
                     </div>
+                    </Link>
                 </li>
                 <li>
                     <img src="photos/doctor.png" alt="doctor" />

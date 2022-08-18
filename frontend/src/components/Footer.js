@@ -25,9 +25,9 @@ function Footer() {
             <li className="pt1">
                 <h3>Our partner</h3>
 
-                <a href="#">One-Fitness</a> <br />
-                <a href="#">One-Drugs</a> <br />
-                <a href="#">One-Live</a>
+                <a href="#">dentist dssda</a> <br />
+                <a href="#">dentist ssadsda</a> <br />
+                <a href="#">dentist ase</a>
             </li>
             <li className="pt1">
                 <h3>Contact</h3>

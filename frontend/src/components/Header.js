@@ -7,7 +7,7 @@ function Header() {
     const [isActive, setIsActive] = useState("")
 
     function changeActive() {
-        if(isActive == "" || !isActive || isActive == undefined){
+        if(isActive === "" || !isActive || isActive === undefined){
             setIsActive("active")
         }
         else{
@@ -22,22 +22,19 @@ function Header() {
             <ul>
                 <li>
                     <div>
-                        <i className="fas fa-phone fa-rotate-90 headerLeftIcon"></i>
-                        <a className="link" href="tel:+38972232111">072 232 111</a>
-                    </div>
-                    <div>
-                        <i className="fas fa-envelope headerLeftIcon"></i>
-                        <a className="link" href="mailto:enesago010@gmail.com">enesago010@gmail.com</a>
-                    </div>
-                </li>
-                <li>
+                        {/* <i className="fas fa-phone fa-rotate-90 headerLeftIcon"></i> */}
+                        {/* <a className="link" href="tel:+38972232111">072 232 111</a> */}
                     <a className="link" href="https://facebook.com" target="_blank"><i className="fab fa-facebook-f headerRightIcon"></i></a>
                     <a className="link" href="https://twitter.com" target="_blank"><i className="fab fa-twitter headerRightIcon"></i></a>
                     <a className="link" href="https://tiktok.com" target="_blank"><i className="fab fa-tiktok headerRightIcon"></i></a>
-                    <a className="link" href="https://instagram.com" target="_blank"><i className="fab fa-instagram headerRightIcon"></i></a>
-                    
-
+                    <a className="link" href="https://www.instagram.com/newsmile.ohrid" target="_blank"><i className="fab fa-instagram headerRightIcon"></i></a>
+                    </div>
+                    <div>
+                        <i className="fas fa-envelope headerLeftIcon"></i>
+                        <a className="link" href="mailto:denizomerov@gmail.com">denizomerov@gmail.com</a>
+                    </div>
                 </li>
+
             </ul>
 
         </div>
@@ -46,11 +43,17 @@ function Header() {
             <ul>
                 <li className="firstLi">
                     <h3><span className="green">New</span>-Smile</h3>
-                    <div>
+                    {/* <div>
                             <button id="searchSumbmit">
                                 <i className="fas fa-search green"></i>
                             </button>
                             <input type="text" id="searchInput" placeholder="Enter Keyword..." />
+                    </div> */}
+                    <div className="phoneNuumber">
+                        <h3>
+                            <a style={{color: "#ffd700", fontSize: "18px"}} href="+38072232111">072 232 111</a>
+                            <a style={{color: "#ffd700", fontSize: "18px", marginLeft: "25px"}} href="+38946200400">046 200 400</a>
+                        </h3>
                     </div>
                     <span onClick={changeActive} id="openNav" className="menubut">
                         <span></span>
@@ -75,7 +78,8 @@ function Header() {
                             <a className="link" href="#">Instagram Posts</a>
                         </li>
                         <li>
-                            <a className="link" href="#">Contact</a>
+                            {/* <a className="link" href="#">Contact</a> */}
+                            <Link className='link' to="/contact">Contact</Link>
                         </li>
                         <li>
                             <a className="link" href="#">

@@ -12,6 +12,7 @@ import {
 
  } from 'react-router-dom';
 import AboutUS from "./pages/AboutUs/AboutUs";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/about" element={<AboutUS />} />
+
+            <Route path="/contact" element={<Contact />} />
 
         </Routes>
 

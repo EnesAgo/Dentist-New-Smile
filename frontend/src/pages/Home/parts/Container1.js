@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../../../css/style.css'
 
 function Container1() {
@@ -8,7 +9,9 @@ function Container1() {
             <h2>NEW SMILE</h2>
 
             <div className="consultBut">
-                <p>let's consult</p>
+                <p>
+                  <Link to="/contact" style={{color:"#fff"}}>let's consult</Link>
+                </p>
             </div>
         </div>
       )

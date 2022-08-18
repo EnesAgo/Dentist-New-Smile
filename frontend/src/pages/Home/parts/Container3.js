@@ -5,6 +5,31 @@ import Container3_box from './Container3_box';
 function Container3() {
 
       const arr = ["photos/doctor1.PNG", "photos/doctor2.PNG", "photos/doctor3.PNG", "photos/doctor.png"]
+      const users = [{
+        name: "Denis",
+        surname: "Omerov",
+        category: "Doctor Of Dental Medicine",
+        url: "hotos/doctor1.PNG"
+      },
+      {
+        name: "Zoran",
+        surname: "Šušak",
+        category: "Oral Surgeon",
+        url: "hotos/doctor2.PNG"
+      },
+      {
+        name: "Lindim",
+        surname: "Poshka",
+        category: "Doctor Of Dental Medicine",
+        url: "hotos/doctor3.PNG"
+      },
+      {
+        name: "asdda",
+        surname: "Poadsdasshka",
+        category: "asdads",
+        url: "hotos/doctor.PNG"
+      }
+    ]
 
       const [threeUrls, setThreeUrls] = useState([arr[0], arr[1], arr[2]])
 
@@ -50,16 +75,16 @@ function Container3() {
       return (
         <div className="container container3" id="container3">
             
-            <h1>Our Doctors</h1>
+            <h1>Our Team</h1>
         
             <ul id="doctors">
 
-                {threeUrls.map(e => (
+                {threeUrls.map((e, index) => (
                     
                     <Container3_box
                     key={`${Math.random()}`}
-                    name={`name`} 
-                    category={`categoty`} 
+                    name={`${users[index].name} ${users[index].surname}`} 
+                    category={users[index].category} 
                     imgUrl={`${e}`} 
                     imgAlt={`doctor`}
                     />
