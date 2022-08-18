@@ -37,10 +37,11 @@ response:
 
 
 
-get Data:
+ids of posts:
 
 curl -X GET \
-  'https://graph.instagram.com/{user-id}?fields=id,username&access_token={access-token}'
+  'https://graph.instagram.com/me/media?fields=id,username&access_token=IGQVJWLU5tNl9zdTc4MldmZAjB4QTFPMHA1MmNVamJscHBsTzhfU2xvNUxKTUIxSElIUng4bjhFd0R6WWxETXBuSXphTWR5cTVRY0o1TERicnMyT19LWXV5SzVWZAFpjellYRXAwU0lyS1RjMFc5N0xuYnBycXFfejNPYmxB'
+
 
 
 this real:
