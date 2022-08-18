@@ -13,6 +13,7 @@ import {
  } from 'react-router-dom';
 import AboutUS from "./pages/AboutUs/AboutUs";
 import Contact from "./pages/Contact/Contact";
+import InstagramPosts from "./pages/Instagram Posts/InstagramPosts";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             <Route path="/about" element={<AboutUS />} />
 
             <Route path="/contact" element={<Contact />} />
+
+            <Route path="/posts" element={<InstagramPosts />} />
+
 
         </Routes>
 

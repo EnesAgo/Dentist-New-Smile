@@ -5,8 +5,8 @@ import '../../../css/style.css'
 function Container1() {
       return (
         <div className="container container1" id="container1">
-            <h4>LET'S MAKE YOUR TEETH HAPPIER</h4>
-            <h2>NEW SMILE</h2>
+            <h2>LET'S MAKE YOUR TEETH HAPPIER</h2>
+            <h1>NEW SMILE</h1>
 
             <div className="consultBut">
                 <p>

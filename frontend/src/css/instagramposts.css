@@ -1,0 +1,22 @@
+.instagramPostsMain{
+    grid-area: main;
+    background-color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.instagramPostsMain ul{
+    height: 100%;
+    width: 100%;
+}
+.postSection{
+    background-color: rgb(244, 249, 245) !important;
+    width: 100%;
+    min-height: 300px;
+}
+.postSection:nth-child(2){
+    background-color: #fff !important;
+}

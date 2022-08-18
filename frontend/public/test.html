@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="ul">
+
+    </ul>
+    
+    <script>
+        async function getInstagramPictures (profileName) {
+            const baseUrl = "https://www.instagram.com";
+            const profileUrl = `${baseUrl}/${profileName}`;
+            const jsonDataUrl = `${profileUrl}/?__a=1`;
+
+            const response = await fetch(jsonDataUrl);
+            const jsonData = await response.json();
+            const pictures = jsonData.graphql.user.edge_owner_to_timeline_media.edges;
+
+            if (response.ok) {
+                return pictures;
+            } else {
+                throw new Error(pictures);
+            }
+        }
+
+        getInstagramPictures("nasa")
+  .then(pictures => console.log("Pictures:", pictures))
+  .catch(error => console.error("Error:", error));
+
+</script>
+</body>
+</html>

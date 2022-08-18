@@ -140,7 +140,7 @@ button{
     text-align: center;
     justify-content: center;
 }
-.container1 h4{
+.container1 h2{
     font-family: 'Poppins', sans-serif;
     color: #fff;
     font-size: 18px;
@@ -151,7 +151,7 @@ button{
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
-.container1 h2{
+.container1 h1{
     font-family: 'Poppins', sans-serif;
     margin: 10px;
     color: #fff;

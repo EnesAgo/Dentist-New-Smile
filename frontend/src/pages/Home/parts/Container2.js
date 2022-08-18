@@ -5,7 +5,7 @@ import '../../../css/style.css'
 function Container2() {
       return (
         <div className="container container2" id="container2">
-            <div className="threeBoxes">
+            {/* <div className="threeBoxes">
                 <div className="box">
                     <img src="https://ykcstruga9aclasses.000webhostapp.com/user.PNG" alt="circle" />
                     <h3>Chat with a <br /> doctor</h3>
@@ -18,7 +18,7 @@ function Container2() {
                     <img src="https://ykcstruga9aclasses.000webhostapp.com/user.PNG" alt="circle" />
                     <h3>One-Health <br /> Pharmacy</h3>
                 </div>
-            </div>
+            </div> */}
             <ul>
                 <li>
                     <h1>Welcome to Your health Center</h1>

@@ -25,7 +25,7 @@ function Header() {
                         {/* <i className="fas fa-phone fa-rotate-90 headerLeftIcon"></i> */}
                         {/* <a className="link" href="tel:+38972232111">072 232 111</a> */}
                     <a className="link" href="https://facebook.com" target="_blank"><i className="fab fa-facebook-f headerRightIcon"></i></a>
-                    <a className="link" href="https://twitter.com" target="_blank"><i className="fab fa-twitter headerRightIcon"></i></a>
+                    {/* <a className="link" href="https://twitter.com" target="_blank"><i className="fab fa-twitter headerRightIcon"></i></a> */}
                     <a className="link" href="https://tiktok.com" target="_blank"><i className="fab fa-tiktok headerRightIcon"></i></a>
                     <a className="link" href="https://www.instagram.com/newsmile.ohrid" target="_blank"><i className="fab fa-instagram headerRightIcon"></i></a>
                     </div>
@@ -51,8 +51,8 @@ function Header() {
                     </div> */}
                     <div className="phoneNuumber">
                         <h3>
-                            <a style={{color: "#ffd700", fontSize: "18px"}} href="+38072232111">072 232 111</a>
-                            <a style={{color: "#ffd700", fontSize: "18px", marginLeft: "25px"}} href="+38946200400">046 200 400</a>
+                            <a style={{color: "#ffd700", fontSize: "18px"}} href="tel:+38072232111">072 232 111</a>
+                            <a style={{color: "#ffd700", fontSize: "18px", marginLeft: "25px"}} href="tel:+38946200400">046 200 400</a>
                         </h3>
                     </div>
                     <span onClick={changeActive} id="openNav" className="menubut">
@@ -75,7 +75,9 @@ function Header() {
                             <a className="link" href="#">Before/After</a>
                         </li>
                         <li>
-                            <a className="link" href="#">Instagram Posts</a>
+                            {/* <a className="link" href="#">Instagram Posts</a> */}
+                            <Link className='link' to="/posts" >Instagram Posts</Link>
+
                         </li>
                         <li>
                             {/* <a className="link" href="#">Contact</a> */}
