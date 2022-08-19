@@ -5,7 +5,7 @@ import Register from './parts/Register';
 
 function Contact() {
       return (
-          <div className='ContaCTMAIN'>
+          <div className='ContactMain'>
 
             <Register />
             <Map />

@@ -1,7 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 
-const Appointment = require("./Mongoose")
+const MongooseFile = require("./Mongoose/Mongoose");
+
+const Appointment = MongooseFile.Appointment;
+const Logins = MongooseFile.Logins;
 
 //ini express server
 const app = express();
@@ -53,6 +56,36 @@ app.get("/apointment", async (req, res) => {
 })
 
 
+
+
+//login schema
+app.post("/login", async (req, res) => {
+  const data = req.body;
+  const password = data.password;
+  const username = data.username;
+  let isTrue = false;
+
+  console.log(username)
+  console.log(password)
+
+  const dbData = await Logins.find({})
+
+  dbData.forEach(e => {
+    if(username === e.username && password === e.password){
+      isTrue = true
+    }
+  })
+  
+  if(isTrue){
+    res.json({
+      status: true
+    })
+  }else{
+    res.json({
+      status: false
+    })
+  }
+})
 
 
 

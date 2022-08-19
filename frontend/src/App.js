@@ -14,6 +14,7 @@ import {
 import AboutUS from "./pages/AboutUs/AboutUs";
 import Contact from "./pages/Contact/Contact";
 import InstagramPosts from "./pages/Instagram Posts/InstagramPosts";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/posts" element={<InstagramPosts />} />
+
+            <Route path="/login" element={<Login />} />
+
 
 
         </Routes>

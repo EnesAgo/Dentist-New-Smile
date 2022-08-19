@@ -84,11 +84,11 @@ function Header() {
                             <Link className='link' to="/contact">Contact</Link>
                         </li>
                         <li>
-                            <a className="link" href="#">
+                            <Link className="link" to="/login">
                                 <div className="login">
                                     <h4>Login/Register</h4>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </li>
