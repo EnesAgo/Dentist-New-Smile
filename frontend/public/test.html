@@ -7,24 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    a
 
-    <ul id="ul">
-
-    </ul>
-    
     <script>
-        const token = 'IGQVJWLU5tNl9zdTc4MldmZAjB4QTFPMHA1MmNVamJscHBsTzhfU2xvNUxKTUIxSElIUng4bjhFd0R6WWxETXBuSXphTWR5cTVRY0o1TERicnMyT19LWXV5SzVWZAFpjellYRXAwU0lyS1RjMFc5N0xuYnBycXFfejNPYmxB'
-        const uri = 'https://graph.instagram.com/17841454826184672?fields=id,username&access_token=' + token;
-
-        async function getIds() {
-            const response = await fetch(uri)
+        async function a(){
+            const obj = {
+                fullName: "Enes Ago",
+                phoneNumber: "070 600 370",
+                date: new Date,
+                time: "17.20"
+            }
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(obj)
+            };
+            const response = await fetch("http://localhost:3001/newApointment",settings);
             const data = await response.json()
 
             console.log(data)
         }
-        getIds()
-
-
-</script>
+        a()
+    </script>
 </body>
 </html>
