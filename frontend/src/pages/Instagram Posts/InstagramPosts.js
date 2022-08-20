@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import './../../css/instagramposts.css'
 
+
+
 function InstagramPosts() {
     const [igPostsId, setIgPostsId] = useState()
     const [errData, setErrData] = useState()
     const [data, setData] = useState()
     const [postArr, setPostArr] = useState([])
 
+    const [fetchUsersOnce, setFetchUsersOnce] = useState(true)
+    const [fetchPostsOnce, setFetchPostsOnce] = useState(true)
 
-    const token = 'IGQVJWRmVZAR0Nkek1uakhpTldXZAkg1RWFHUlZAjbDNsUmI2bEhtQW5IejFNVkRLNFhtZAXJ3c3RBYVhkZAnYxc2o1QzNuRnRkdXdmRW9SbkRkUmJ1VUJpM0NvTldsZAHZAoNXZAjQjdGYW1oQ05FYXFqYWoxMwZDZD'
+
+    const token = process.env.REACT_APP_TOKEN;
     const uri = 'https://graph.instagram.com/me/media?fields=id,username&access_token=' + token;
     
 
@@ -32,9 +37,13 @@ function InstagramPosts() {
                 setErrData("error")
             }
 
+            setFetchUsersOnce(false)
+
 
         }
-        getIds()
+        if(fetchUsersOnce){
+            getIds()
+        }
     }, [])
 
     useEffect(() => {
@@ -68,9 +77,13 @@ function InstagramPosts() {
 
                 }
 
+                setFetchPostsOnce(false)
+
             }
 
-            getPostInfo()
+            if(fetchPostsOnce){
+                getPostInfo()
+            }
     }, [igPostsId])
 
 
