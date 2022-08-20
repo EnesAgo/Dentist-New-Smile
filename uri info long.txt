@@ -1,107 +1,10 @@
-https://v1.nocodeapi.com/newsmile/instagram/tIugTwbjFNSQTlBM
-
-
-
-
-
-
-
-
-
-authorize:
-
-
-https://api.instagram.com/oauth/authorize
-  ?client_id=794193168425021
-  &redirect_uri=https://newsmile.com.mk/
-  &scope=user_profile,user_media
-  &response_type=code
-
-
-response = https://newsmile.com.mk/?code=AQBZATphDFFIe2maD19_jUYLLZlmS76Mo9WkEpSnRvhcf37KgJQ6E96SjAQZ8MxaiklCOO4MJMNLd-WFAFefgqsjyftfDPfqNw4CJ1vn2F7Ob28rZRwKi1OvBgE-Fi76NQidJIAmZnMWWqZuLLy5q5yo9qQ56ol5BzmHaIo_TdpVGtrYiMaKX_93B94hroMON6JRSn_cMLuyQytppgvmbNA_WarJxdHliNPvwFqO6exqbw#_
-
-
-
-
-
-
-
-
-
-get code:
-
-curl -X POST \
-  https://api.instagram.com/oauth/access_token \
-  -F client_id=794193168425021 \
-  -F client_secret=56d6818ec8cdfca2fac7e37507933ea8 \
-  -F grant_type=authorization_code \
-  -F redirect_uri=https://newsmile.com.mk/ \
-  -F code=AQBZATphDFFIe2maD19_jUYLLZlmS76Mo9WkEpSnRvhcf37KgJQ6E96SjAQZ8MxaiklCOO4MJMNLd-WFAFefgqsjyftfDPfqNw4CJ1vn2F7Ob28rZRwKi1OvBgE-Fi76NQidJIAmZnMWWqZuLLy5q5yo9qQ56ol5BzmHaIo_TdpVGtrYiMaKX_93B94hroMON6JRSn_cMLuyQytppgvmbNA_WarJxdHliNPvwFqO6exqbw
-
-response:
-{
-  "access_token": "IGQVJXckZAsWEVNLUhTUWxFdllfZA2ViWW9tcFR3ZADM0LWF0Vm04c245YzVIUmdaVGZAlSE4yZAjVmaEpHUkkxQ1B5QjZADM3dBeGFYQ3g4S0p2RGljd0hraFZAYMU1mLU5nVkpJMUVacmRNNGVvaWdqSlZAYbkYxeUNWTml3V2tr", 
-  "user_id": 17841454826184672
-  }
-
-
-
-
-
-
-
-
-get Lond-Lived token:
-
-curl -i -X GET "https://graph.instagram.com/access_token/
-  ?grant_type=ig_exchange_token
-  &client_secret={instagram-app-secret}
-  &access_token={short-lived-access-token}"
-
-
-curl -i -X GET "https://graph.instagram.com/access_token/
-  ?grant_type=ig_exchange_token
-  &client_secret=56d6818ec8cdfca2fac7e37507933ea8
-  &access_token=IGQVJXckZAsWEVNLUhTUWxFdllfZA2ViWW9tcFR3ZADM0LWF0Vm04c245YzVIUmdaVGZAlSE4yZAjVmaEpHUkkxQ1B5QjZADM3dBeGFYQ3g4S0p2RGljd0hraFZAYMU1mLU5nVkpJMUVacmRNNGVvaWdqSlZAYbkYxeUNWTml3V2tr"
-
-response:
-{
-   "access_token": "IGQVJXd0xjV3FQUEhxTnkyYzRXMEQ2ZAWZApTGZAOLTh2X1dSOXpjWVMtLTZAJa2ZA3RjV2X0w0Sk1KdVFWVkc0cF82QUZABUzR1Y3hJb2tDM3RoRFhxa1NBUVhzQVlJcG9YRFNSTE9Jb2Vn",
-   "token_type": "bearer",
-   "expires_in": 5102921
-}
-
-
-
-
-get Data:
-
-curl -X GET \
-  'https://graph.instagram.com/{user-id}?fields=id,username&access_token={access-token}'
-
-
-this real:
-
-curl -X GET \
-  'https://graph.instagram.com/17841454826184672?fields=id,username&access_token=IGQVJXd0xjV3FQUEhxTnkyYzRXMEQ2ZAWZApTGZAOLTh2X1dSOXpjWVMtLTZAJa2ZA3RjV2X0w0Sk1KdVFWVkc0cF82QUZABUzR1Y3hJb2tDM3RoRFhxa1NBUVhzQVlJcG9YRFNSTE9Jb2Vn'
-
-
-
-
-
-
-Getting posts:
-"id":7850287618375591
-"username":"newsmileohrid"
-
-
 ids of posts:
 
 curl -X GET \
-  'https://graph.instagram.com/me/media?fields=id,username&access_token=IGQVJXd0xjV3FQUEhxTnkyYzRXMEQ2ZAWZApTGZAOLTh2X1dSOXpjWVMtLTZAJa2ZA3RjV2X0w0Sk1KdVFWVkc0cF82QUZABUzR1Y3hJb2tDM3RoRFhxa1NBUVhzQVlJcG9YRFNSTE9Jb2Vn'
+  'https://graph.instagram.com/me/media?fields=id,username&access_token={token}'
 
 
 getting post by id:
 
 curl -X GET \
-    'https://graph.instagram.com/17933314010248364?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJXd0xjV3FQUEhxTnkyYzRXMEQ2ZAWZApTGZAOLTh2X1dSOXpjWVMtLTZAJa2ZA3RjV2X0w0Sk1KdVFWVkc0cF82QUZABUzR1Y3hJb2tDM3RoRFhxa1NBUVhzQVlJcG9YRFNSTE9Jb2Vn'
+    'https://graph.instagram.com/{id}?fields=id,media_type,media_url,username,timestamp&access_token={token}'

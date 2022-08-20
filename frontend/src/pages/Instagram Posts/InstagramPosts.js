@@ -4,10 +4,11 @@ import './../../css/instagramposts.css'
 function InstagramPosts() {
     const [igPostsId, setIgPostsId] = useState()
     const [errData, setErrData] = useState()
-    const [data, setData] = useState([])
+    const [data, setData] = useState()
+    const [postArr, setPostArr] = useState([])
 
 
-    const token = 'IGQVJXd0xjV3FQUEhxTnkyYzRXMEQ2ZAWZApTGZAOLTh2X1dSOXpjWVMtLTZAJa2ZA3RjV2X0w0Sk1KdVFWVkc0cF82QUZABUzR1Y3hJb2tDM3RoRFhxa1NBUVhzQVlJcG9YRFNSTE9Jb2Vn'
+    const token = 'IGQVJWRmVZAR0Nkek1uakhpTldXZAkg1RWFHUlZAjbDNsUmI2bEhtQW5IejFNVkRLNFhtZAXJ3c3RBYVhkZAnYxc2o1QzNuRnRkdXdmRW9SbkRkUmJ1VUJpM0NvTldsZAHZAoNXZAjQjdGYW1oQ05FYXFqYWoxMwZDZD'
     const uri = 'https://graph.instagram.com/me/media?fields=id,username&access_token=' + token;
     
 
@@ -41,6 +42,8 @@ function InstagramPosts() {
                 let posts = [];
 
                 if(igPostsId){
+                setPostArr([])
+
                     try{
                         igPostsId.data.forEach(async element => {
                             const postId = element.id;
@@ -50,12 +53,14 @@ function InstagramPosts() {
                             const postData = await postRes.json()
         
                             posts.push(postData)
+                            console.log(postData)
+                            setPostArr(current => [...current, postData])
         
         
                         });
             
                         setData(posts)
-                        console.log(data)
+                        // console.log(data)
                     }
                     catch(e){
                         console.log(`error is: ${e}`)
@@ -79,7 +84,14 @@ function InstagramPosts() {
                         {
                             errData ?
                             <h1>Api has reached his limitations, please try later</h1> :
-                            <h1>data</h1>
+                            <>
+                            {
+                                postArr.map(e => 
+                                        <img key={`${e.id}${Math.random()}`} src={e.media_url} style={{height:"100px"}} />
+                                        // <div key={e.id}>hi</div>
+                                )
+                            }
+                            </>
                         }
                     </>     :
                     <div>Loading...</div>
