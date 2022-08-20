@@ -52,7 +52,47 @@ app.post("/newApointment", async (req, res) => {
 
 //get appointments
 app.get("/apointment", async (req, res) => {
-  res.json(await Appointment.find({}))
+  let calAppointments = []
+  const jsonAppointments = await Appointment.find({});
+
+
+
+  jsonAppointments.forEach(e => {
+
+    const splitDate = Array.from(e.date.split("-"))
+    const splitTime = Array.from(e.time.split(":"))
+    let fullDateTime = splitDate.concat(splitTime)
+  
+    fullDateTime[1] = fullDateTime[1]-1;
+  
+    const startDateTime = fullDateTime.map(e => parseInt(e))
+
+    let endDateTime = fullDateTime.map(e => parseInt(e))
+
+    if(endDateTime[4] == 30){
+      endDateTime[4] = 00;
+      endDateTime[3] = endDateTime[3]+1;
+    }
+    else{
+      endDateTime[4] = 30;
+    }
+    
+  
+    console.log("\n")
+    console.log(startDateTime)
+    console.log(endDateTime)
+
+
+    const obj = {
+      title: `${e.fullName}`,
+      start: new Date(startDateTime[0], startDateTime[1], startDateTime[2], startDateTime[3], startDateTime[4]),
+      end: new Date(endDateTime[0], endDateTime[1], endDateTime[2], endDateTime[3], endDateTime[4])
+    }
+
+    calAppointments.push(obj)
+  })
+
+  res.json(calAppointments)
 })
 
 
