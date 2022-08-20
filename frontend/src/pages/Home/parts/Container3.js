@@ -32,6 +32,8 @@ function Container3() {
     ]
 
       const [threeUrls, setThreeUrls] = useState([arr[0], arr[1], arr[2]])
+      const [threeDatas, setThreeDatas] = useState([users[0], users[1], users[2]])
+
 
       const [index, setIndex] = useState(1);
 
@@ -40,14 +42,17 @@ function Container3() {
         if(index == 1){
             setIndex(prev => prev-1)
             setThreeUrls([arr[arr.length-1], arr[index-1], arr[index]])
+            setThreeDatas([users[users.length-1], users[index-1], users[index]])
         }
         else if(index == 0){
             setIndex(arr.length-1)
             setThreeUrls([arr[arr.length-2], arr[arr.length-1], arr[index]])
+            setThreeDatas([users[arr.length-2], users[arr.length-1], users[index]])
         }
         else{
             setIndex(prev => prev-1)
             setThreeUrls([arr[index-2], arr[index-1], arr[index]])
+            setThreeDatas([users[index-2], users[index-1], users[index]])
         }
         console.log(index)
 
@@ -83,8 +88,8 @@ function Container3() {
                     
                     <Container3_box
                     key={`${Math.random()}`}
-                    name={`${users[index].name} ${users[index].surname}`} 
-                    category={users[index].category} 
+                    name={`${threeDatas[index].name} ${threeDatas[index].surname}`} 
+                    category={threeDatas[index].category} 
                     imgUrl={`${e}`} 
                     imgAlt={`doctor`}
                     />
