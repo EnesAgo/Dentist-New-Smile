@@ -67,6 +67,7 @@
 
 .header .bot ul .firstLi{
     display: flex;
+    align-items: center;
 }
 .header .bot ul .firstLi .phoneNuumber h3 a:hover{
     color: #ffec80 !important;
@@ -135,6 +136,11 @@
 }
 
 /*seccond-li // navbar*/
+.header .bot ul .secLi{
+    display: flex;
+    align-items: center;
+
+}
 .header .bot ul .secLi ul{
     min-height: 60px;
     max-width: 700px;

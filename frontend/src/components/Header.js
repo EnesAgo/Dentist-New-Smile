@@ -31,7 +31,7 @@ function Header() {
                     </div>
                     <div>
                         <i className="fas fa-envelope headerLeftIcon"></i>
-                        <a className="link" href="mailto:denizomerov@gmail.com">denizomerov@gmail.com</a>
+                        <a className="link" href="mailto:newsmileohrid@gmail.com">newsmileohrid@gmail.com</a>
                     </div>
                 </li>
 
@@ -42,6 +42,7 @@ function Header() {
             
             <ul>
                 <li className="firstLi">
+                    <img src='/logo.png' height={"50px"} />
                     <h3><span className="green">New</span>-Smile</h3>
                     {/* <div>
                             <button id="searchSumbmit">
