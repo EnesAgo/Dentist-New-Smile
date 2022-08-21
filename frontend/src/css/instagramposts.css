@@ -22,11 +22,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 50px;
 
-    padding: 20px 0;
+    margin: 20px 0;
 
 }
 .postSection div{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 20px;
 }

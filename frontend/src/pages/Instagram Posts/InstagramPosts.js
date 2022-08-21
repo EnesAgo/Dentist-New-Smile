@@ -61,7 +61,7 @@ function InstagramPosts() {
                                     <a href={e.permalink} target="_blank" >
                                     {
                                         (e.media_type == 'IMAGE' || e.media_type == "CAROUSEL_ALBUM") ?
-                                        <img src={e.media_url} style={{width:"300px"}} /> :
+                                        <img src={e.media_url} style={{width:"300px", background: "rgb(220, 222, 220)"}} /> :
                                         <video height={"300px"} controls style={{width:"300px", background: "rgb(220, 222, 220)"}}>
                                             <source src={e.media_url} type="video/mp4" />
                                         </video>
