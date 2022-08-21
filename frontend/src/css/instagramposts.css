@@ -13,10 +13,20 @@
     width: 100%;
 }
 .postSection{
+    overflow-x: hidden;
     background-color: rgb(244, 249, 245) !important;
     width: 100%;
     min-height: 300px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+
+    padding: 20px 0;
+
 }
-.postSection:nth-child(2){
-    background-color: #fff !important;
+.postSection div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -4,18 +4,15 @@ import './../../css/instagramposts.css'
 
 
 function InstagramPosts() {
-    const [igPostsId, setIgPostsId] = useState()
     const [errData, setErrData] = useState()
     const [data, setData] = useState()
-    const [postArr, setPostArr] = useState([])
 
     const [fetchUsersOnce, setFetchUsersOnce] = useState(true)
-    const [fetchPostsOnce, setFetchPostsOnce] = useState(true)
 
 
-    const token = process.env.REACT_APP_TOKEN;
-    const uri = 'https://graph.instagram.com/me/media?fields=id,username&access_token=' + token;
-    
+    // const token = process.env.REACT_APP_TOKEN;
+    const token = process.env.REACT_APP_TOKEN_ORRIGINAL;
+    const uri = `https://graph.instagram.com/me/media?fields=id,username,media_url,media_type,caption,permalink,timestamp&access_token=${token}`;
 
 
     useEffect(() => {
@@ -29,7 +26,8 @@ function InstagramPosts() {
                     setErrData("error")
                 }
                 else{
-                    setIgPostsId(data)
+                    setData(data)
+                    console.log(data)
                 }
             }
             catch(e){
@@ -39,52 +37,11 @@ function InstagramPosts() {
 
             setFetchUsersOnce(false)
 
-
         }
         if(fetchUsersOnce){
             getIds()
         }
     }, [])
-
-    useEffect(() => {
-            function getPostInfo() {
-                let posts = [];
-
-                if(igPostsId){
-                setPostArr([])
-
-                    try{
-                        igPostsId.data.forEach(async element => {
-                            const postId = element.id;
-                            const postUri = `https://graph.instagram.com/${postId}?fields=id,media_type,media_url,username,timestamp&access_token=${token}`;
-        
-                            const postRes = await fetch(postUri)
-                            const postData = await postRes.json()
-        
-                            posts.push(postData)
-                            console.log(postData)
-                            setPostArr(current => [...current, postData])
-        
-        
-                        });
-            
-                        setData(posts)
-                        // console.log(data)
-                    }
-                    catch(e){
-                        console.log(`error is: ${e}`)
-                    }
-
-                }
-
-                setFetchPostsOnce(false)
-
-            }
-
-            if(fetchPostsOnce){
-                getPostInfo()
-            }
-    }, [igPostsId])
 
 
       return (
@@ -99,9 +56,19 @@ function InstagramPosts() {
                             <h1>Api has reached his limitations, please try later</h1> :
                             <>
                             {
-                                postArr.map(e => 
-                                        <img key={`${e.id}${Math.random()}`} src={e.media_url} style={{height:"100px"}} />
-                                        // <div key={e.id}>hi</div>
+                                data.data.map(e => 
+                                <div key={`${e.id}${Math.random()}`} style={{minWidth: "300px"}}>
+                                    <a href={e.permalink} target="_blank" >
+                                    {
+                                        (e.media_type == 'IMAGE' || e.media_type == "CAROUSEL_ALBUM") ?
+                                        <img src={e.media_url} style={{width:"300px"}} /> :
+                                        <video height={"300px"} controls style={{width:"300px", background: "rgb(220, 222, 220)"}}>
+                                            <source src={e.media_url} type="video/mp4" />
+                                        </video>
+                                    
+                                    }
+                                    </a>
+                                </div>
                                 )
                             }
                             </>
